@@ -31,8 +31,10 @@
             <form action="https://echo.htmlacademy.ru" method="post">
                 <fieldset class="price-filters">
                     <legend>Стоимость:</legend>
-                    <div class="range-control">
-
+                    <div class="range-container">
+                        <div class="range">
+                            <div class="current-progress"></div>
+                        </div>
                     </div>
                     <div class="range-display">
                         <label>
@@ -98,12 +100,20 @@
         </aside>
         <section class="catalog">
             <div class="controls">
-                <b>Сортировать</b>
-                <button>По цене</button>
-                <button>По типу</button>
-                <button>По названию</button>
-                <button>▲</button>
-                <button>‎▼</button>
+                <b>Сортировать:</b>
+                <div class="wrap">
+                    <button>По цене</button>
+                    <button>По типу</button>
+                    <button>По названию</button>
+                    <div>
+                        <button>▲</button>
+                        <button>‎▼</button>
+                    </div>
+
+
+                </div>
+
+
             </div>
             <ul class="catalog-list">
                 <li class="item">
@@ -171,6 +181,20 @@
                             для туристов</p>
                         <button type="submit" class="red-button button">9 900 руб.</button>
                     </div>
+                </li>
+            </ul>
+            <ul class="paginator">
+                <li>
+                    <button class="button active" disabled>1</button>
+                </li>
+                <li>
+                    <button class="button">2</button>
+                </li>
+                <li>
+                    <button class="button">3</button>
+                </li>
+                <li>
+                    <button class="button wide-button">Следующая</button>
                 </li>
             </ul>
         </section>

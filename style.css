@@ -526,12 +526,49 @@ header {
 .filter .price-filters legend {
     margin-bottom: 57px;
 }
-.filter .price-filters .range-control {
+.filter .price-filters .range-container {
     width: 100%;
     height: 80px;
     margin-bottom: 14px;
     background-color: #eee;
     border-radius: 4px;
+}
+.filter .price-filters .range {
+    width: 219px;
+    height: 2px;
+    padding: 39px 10px;
+    margin: 0 auto;
+    background-clip: content-box;
+    background-color: #d7dcde;
+}
+.filter .price-filters .current-progress {
+    height: 2px;
+
+    box-sizing: border-box;
+    margin-left: 30%;
+    margin-right: 5%;
+    background-color: #00ca74;
+    position: relative;
+}
+
+.filter .price-filters .current-progress::before,
+.filter .price-filters .current-progress::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    border: 8px solid white;
+    background-color: #ababab;
+    top: -9px;
+    border-radius: 50%;
+    box-shadow: 0 3px 1px 0 #cccdcd;
+}
+.filter .price-filters .current-progress::after {
+    right: -9px;
+}
+.filter .price-filters .current-progress::before {
+    left: -9px;
 }
 .filter .price-filters .range-display {
     margin-bottom: 62px;
@@ -684,6 +721,45 @@ header {
 }
 .catalog .controls {
     margin-bottom: 60px;
+    text-transform: uppercase;
+
+}
+.catalog .controls .wrap div {
+    display: inline-block;
+    margin-left: 48px;
+}
+.catalog .controls .wrap div button {
+    margin: 0;
+}
+.catalog .controls .wrap div button:first-child {
+    margin-right: 10px;
+}
+.catalog .controls b {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+.catalog .controls * {
+    margin: 0;
+    padding: 0;
+}
+.catalog .controls .wrap {
+    float: right;
+}
+
+.catalog .controls button {
+    background: none;
+    border: none;
+    color: #cacaca;
+    transition-duration: 0.4s;
+    text-transform: inherit;
+    margin-right: 26px;
+    display: inline;
+}
+.catalog .controls button:hover,
+.catalog .controls button:focus {
+    color: black;
 }
 .catalog .catalog-list {
     display: flex;
@@ -754,4 +830,39 @@ header {
     color: #666;
     margin-top: 14px;
     line-height: 18px;
+}
+
+.catalog .catalog-list {
+    margin-bottom: 60px;
+}
+.catalog .paginator {
+    margin-bottom: 60px;
+    display: flex;
+    width: 455px;
+}
+.catalog .paginator button {
+    box-sizing: border-box;
+    background-color: #eeeeee;
+    width: 50px;
+    height: 50px;
+    margin-right: 11px;
+    color: black;
+
+}
+.catalog .paginator button:hover,
+.catalog .paginator button:focus {
+    background-color: #dfdfdf;
+}
+.catalog .paginator button:active {
+    background-color: #d5d5d5;
+    color: #959595;
+}
+.catalog .paginator button.active {
+    background-color: white;
+    border: 3px solid #dbdbdb;
+    line-height: 44px;
+}
+
+.catalog .paginator .wide-button {
+    width: 260px;
 }
